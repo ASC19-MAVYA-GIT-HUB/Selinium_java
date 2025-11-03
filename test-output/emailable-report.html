@@ -8,19 +8,37 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Ajio Automation Suite</th></tr>
-<tr><td><a href="#t0">Ajio End-to-End Tests</a></td><td class="num">5</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">165,907</td><td></td><td></td></tr>
+<tr><th colspan="8">Ajio Test Suite</th></tr>
+<tr><td><a href="#t0">Login Test</a></td><td class="num">3</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">225,767</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Ajio Automation Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Ajio End-to-End Tests &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.ajio.tests.CartQuantityAjio</td><td><a href="#m0">increaseQuantityInCart</a></td><td rowspan="1">1761810126581</td><td rowspan="1">19985</td></tr><tr><th colspan="4">Ajio End-to-End Tests &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.ajio.tests.AddToCartAjio</td><td><a href="#m1">addProductToCart</a></td><td rowspan="1">1761810107791</td><td rowspan="1">18785</td></tr><tr class="passedodd"><td rowspan="1">com.ajio.tests.CheckoutAjio</td><td><a href="#m2">checkoutFlowTest</a></td><td rowspan="1">1761810179590</td><td rowspan="1">49400</td></tr><tr class="passedeven"><td rowspan="1">com.ajio.tests.LoginAjio</td><td><a href="#m3">loginWithValidPhoneNumber</a></td><td rowspan="1">1761810063129</td><td rowspan="1">30084</td></tr><tr class="passedodd"><td rowspan="1">com.ajio.tests.RemoveFromCartAjio</td><td><a href="#m4">removeProductFromCart</a></td><td rowspan="1">1761810146581</td><td rowspan="1">33006</td></tr><tr class="passedeven"><td rowspan="1">com.ajio.tests.SearchAjio</td><td><a href="#m5">searchForProduct</a></td><td rowspan="1">1761810093229</td><td rowspan="1">14558</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Ajio Test Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Login Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">com.ajio.tests.loginajio</td><td><a href="#m0">addToWishlistTest</a></td><td rowspan="1">1762142087452</td><td rowspan="1">28515</td></tr><tr class="failedeven"><td><a href="#m1">proceedToCheckoutTest</a></td><td rowspan="1">1762142139711</td><td rowspan="1">31620</td></tr><tr><th colspan="4">Login Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="3">com.ajio.tests.loginajio</td><td><a href="#m2">addToCartTest</a></td><td rowspan="1">1762142045568</td><td rowspan="1">19364</td></tr><tr class="passedeven"><td><a href="#m3">selectProductTest</a></td><td rowspan="1">1762142192483</td><td rowspan="1">14529</td></tr><tr class="passedeven"><td><a href="#m4">selectSizeTest</a></td><td rowspan="1">1762142218227</td><td rowspan="1">24951</td></tr></tbody>
 </table>
-<h2>Ajio End-to-End Tests</h2><h3 id="m0">com.ajio.tests.CartQuantityAjio#increaseQuantityInCart</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.RuntimeException: ❌ Quantity increase failed.
-	at com.ajio.tests.CartQuantityAjio.increaseQuantityInCart(CartQuantityAjio.java:55)
+<h2>Login Test</h2><h3 id="m0">com.ajio.tests.loginajio#addToWishlistTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.cssSelector: a[href*=&apos;wishlist&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\SARIPU~1.MAV\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62927}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62927/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: eb93e9388647454d2b99093c1c810a49
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.ajio.pages.ProductPage.addToWishlist(ProductPage.java:51)
+	at com.ajio.tests.loginajio.addToWishlistTest(loginajio.java:219)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 ... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.ajio.tests.AddToCartAjio#addProductToCart</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.ajio.tests.CheckoutAjio#checkoutFlowTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.ajio.tests.LoginAjio#loginWithValidPhoneNumber</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.ajio.tests.RemoveFromCartAjio#removeProductFromCart</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">com.ajio.tests.SearchAjio#searchForProduct</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.ajio.tests.loginajio#proceedToCheckoutTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //span[text()=&apos;PROCEED TO CHECKOUT&apos;] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.8&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 141.0.7390.123, chrome: {chromedriverVersion: 141.0.7390.122 (b477534e7e1..., userDataDir: C:\Users\SARIPU~1.MAV\AppDa...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52048}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52048/devtoo..., se:cdpVersion: 141.0.7390.123, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 27c4c58b0c6f489542b0b509224ce31e
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at com.ajio.pages.CartPage.proceedToCheckout(CartPage.java:41)
+	at com.ajio.tests.loginajio.proceedToCheckoutTest(loginajio.java:195)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.ajio.tests.loginajio#addToCartTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.ajio.tests.loginajio#selectProductTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">com.ajio.tests.loginajio#selectSizeTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

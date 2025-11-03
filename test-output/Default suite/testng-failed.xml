@@ -3,13 +3,21 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.ajio.tests.CheckoutAjio">
+      <class name="com.ajio.tests.loginajio">
         <methods>
-          <include name="flushReport"/>
           <include name="setupReport"/>
-          <include name="checkoutFlowTest"/>
+          <include name="selectSizeTest"/>
+          <include name="proceedToCheckoutTest"/>
+          <include name="tearDownTest"/>
+          <include name="tearDown"/>
+          <include name="selectProductTest"/>
+          <include name="flushReport"/>
+          <include name="setup"/>
+          <include name="addToWishlistTest"/>
+          <include name="addToCartTest"/>
+          <include name="searchProductTest"/>
         </methods>
-      </class> <!-- com.ajio.tests.CheckoutAjio -->
+      </class> <!-- com.ajio.tests.loginajio -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

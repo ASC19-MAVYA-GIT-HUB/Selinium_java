@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Ajio Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Ajio Tests(failed)">
+    <classes>
+      <class name="tests.AjioAddToCartTest">
+        <methods>
+          <include name="addProductToCart"/>
+          <include name="closeReport"/>
+          <include name="setupReport"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- tests.AjioAddToCartTest -->
+    </classes>
+  </test> <!-- Ajio Tests(failed) -->
+</suite> <!-- Failed suite [Ajio Suite] -->

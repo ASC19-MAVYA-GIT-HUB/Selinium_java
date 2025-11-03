@@ -1,33 +1,55 @@
 package com.ajio.utilities;
-
+ 
 import com.aventstack.extentreports.ExtentReports;
+
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
-import com.aventstack.extentreports.reporter.configuration.Theme;
-
+ 
+import java.io.File;
+ 
 public class ExtentManager {
-
+ 
     private static ExtentReports extent;
-    private static final String REPORT_NAME = "Ajio Automation Report";
-    private static final String REPORT_PATH = System.getProperty("user.dir") + "/src/test/resources/Reports/AjioReport.html";
 
+    static String projectPath = System.getProperty("user.dir");
+ 
     public static ExtentReports getInstance() {
+
         if (extent == null) {
-            // ✅ Print the path to verify where the report will be created
-            System.out.println("Extent report will be created at: " + REPORT_PATH);
 
-            ExtentSparkReporter sparkReporter = new ExtentSparkReporter(REPORT_PATH);
-            sparkReporter.config().setReportName(REPORT_NAME);
-            sparkReporter.config().setDocumentTitle("Ajio Test Execution");
-            sparkReporter.config().setTheme(Theme.DARK);
+            String reportPath = projectPath + "/src/test/resources/Reports/AjioReport.html";
 
+            File reportFile = new File(reportPath);
+
+            reportFile.getParentFile().mkdirs(); // Ensure directories exist
+ 
+            ExtentSparkReporter spark = new ExtentSparkReporter(reportFile);
+
+            spark.config().setDocumentTitle("Ajio Automation Report");
+
+            spark.config().setReportName("Ajio E-Commerce Test Results");
+ 
             extent = new ExtentReports();
-            extent.attachReporter(sparkReporter);
-            extent.setSystemInfo("Framework", "Ajio Automation");
-            extent.setSystemInfo("Author", "Mavya");
-            extent.setSystemInfo("Environment", "QA");
-            extent.setSystemInfo("OS", System.getProperty("os.name"));
-            extent.setSystemInfo("Java Version", System.getProperty("java.version"));
+
+            extent.attachReporter(spark);
+
+            extent.setSystemInfo("Project", "Ajio E-Commerce Automation");
+
+            extent.setSystemInfo("Tester", "Mavya");
+
         }
+
         return extent;
+
     }
+ 
+	public static ExtentReports getinstance() {
+
+		// TODO Auto-generated method stub
+
+		return null;
+
+	}
+
 }
+
+ 
